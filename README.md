@@ -10,7 +10,7 @@ Website, documentation and help: https://crashdump.info/astronomy/blinkfits/
 Each release provides two files:
 
 - `blinkfits.zip` - the download. It contains `blinkfits.exe` (the program: one file, no
-  installer, no runtime, no DLLs - just run it), `blinkfits.exe.sha256` and this readme.
+  installer, no runtime, no DLLs - just run it) and this readme.
 - `blinkfits.zip.sha256` - the SHA-256 checksum of the zip.
 
 To check that the download is complete and unchanged, run this in PowerShell in the download
@@ -20,7 +20,8 @@ folder and compare the result with the value in `blinkfits.zip.sha256`:
 Get-FileHash .\blinkfits.zip -Algorithm SHA256
 ```
 
-After unpacking, check the exe the same way against the `blinkfits.exe.sha256` from the zip:
+After unpacking, check the exe the same way. The SHA-256 of `blinkfits.exe` in version 1.1.0 is
+`f4feabfff7dfa7863716215ce9c8ba78deff053261f516b5b074f78ee8fcd040`:
 
 ```powershell
 Get-FileHash .\blinkfits.exe -Algorithm SHA256
