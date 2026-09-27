@@ -20,12 +20,29 @@ folder and compare the result with the value in `blinkfits.zip.sha256`:
 Get-FileHash .\blinkfits.zip -Algorithm SHA256
 ```
 
-After unpacking, check the exe the same way. The SHA-256 of `blinkfits.exe` in version 1.1.0 is
-`f4feabfff7dfa7863716215ce9c8ba78deff053261f516b5b074f78ee8fcd040`:
+After unpacking, check the exe the same way. The SHA-256 of `blinkfits.exe` in version 1.2.0 is
+`1bdd30edc5f8292f92c4a349fd6a2cf5cd96482cf625ea13f469b1e9261308e0`:
 
 ```powershell
 Get-FileHash .\blinkfits.exe -Algorithm SHA256
 ```
+
+## Changes in version 1.2.0
+
+- New: Find trails tags images with satellite or plane trails as _trail.
+- New: Find blur tags images whose stars are larger than in the sharpest frame as _blur.
+- New: Allowed blur deviation (%) slider, 0 to 200 percent in steps of 10, default 20.
+- New: Remove trail/blur tags renames every tagged file back and forgets tags taken off with M.
+- New: M on a tagged image takes the tag off; M again marks it with your own suffix.
+- New: Show trails, Show blur and Show marked limit the list and blinking to those images.
+- New: Mouse wheel zooms around the pointer, through every step from 5 percent to 10x.
+- New: Magnify slider, 2x to 10x, below Zoom.
+- New: X opens Move marked to folder.
+- New: The move dialog opens in the folder you used last.
+- New: Move marked to folder also moves images tagged _trail or _blur.
+- Help: restructured, with a table of contents and a Top link on every section.
+- Help: new sections for Find bad images and Move marked to folder.
+- All 15 languages updated for the new functions.
 
 ## Changes in version 1.1.0
 
