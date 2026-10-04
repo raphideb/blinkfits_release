@@ -20,12 +20,26 @@ folder and compare the result with the value in `blinkfits.zip.sha256`:
 Get-FileHash .\blinkfits.zip -Algorithm SHA256
 ```
 
-After unpacking, check the exe the same way. The SHA-256 of `blinkfits.exe` in version 1.2.0 is
-`1bdd30edc5f8292f92c4a349fd6a2cf5cd96482cf625ea13f469b1e9261308e0`:
+After unpacking, check the exe the same way. The SHA-256 of `blinkfits.exe` in version 1.3.0 is
+`c383a2e6b1a00365e9312c15429e8639afece3c4582ea3de66ff8e1ef617b32b`:
 
 ```powershell
 Get-FileHash .\blinkfits.exe -Algorithm SHA256
 ```
+
+## Changes in version 1.3.0
+
+- New Detect clouds checkbox beside the Allowed blur deviation slider. When it is checked,
+  Find blur also tags frames whose sky is brighter or more patchy than in the frames taken
+  just before and after it, whatever the allowed deviation. It is on by default and keeps
+  your choice.
+- The Allowed blur deviation slider shows its value in its label, for example
+  "Allowed blur deviation: 20%".
+- Shift with Up or Down starts a new selection at the current image when you moved to
+  another image in between, instead of extending the old selection.
+- New key: Ctrl+Shift with Up or Down adds a new range to the selection.
+- The Help view and the key table describe the cloud check and the new selection keys in
+  every language.
 
 ## Changes in version 1.2.0
 
